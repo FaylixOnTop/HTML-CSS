@@ -1,0 +1,256 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100%;
+    min-height: 100vh;
+}
+
+body {
+    background: linear-gradient(120deg, #444444, #757577);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: grid;
+    grid-template-areas: 
+        "vak1 vak2"
+        "vak4 vak3";
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 20px;
+    background-color: #444444;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    gap: 80vw;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.HP_Vak1 {
+    font-size: 25px; 
+    grid-area: vak1;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px; 
+    border-radius: 5px;
+    width: 25vw;
+    height: auto;
+    margin: 15px;   
+    height: fit-content;
+}
+
+.HP_Vak2 {
+    grid-area: vak2;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    justify-self: center;
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    
+    width: fit-content;  
+    height: fit-content; 
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+#contactForm {
+    display: none;
+    margin-top: 10px;
+}
+
+#toggleForm {
+    cursor: pointer;
+    color: rgb(255, 255, 255); 
+    text-decoration: underline; 
+}
+
+#toggleForm:hover {
+    color: #b8b8b8;
+}
+
+.HP_Vak3 {
+    grid-area: vak3;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    align-self: end;
+    width: 40vw;
+}
+
+.HP_Vak1, .HP_Vak2, .HP_Vak3 {
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 2); 
+}
+
+.ProjectFoto {
+    text-align: center;
+    width: 350px; 
+    height: auto; 
+}
+
+
+img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.Wich_Page {
+    position: static;
+    padding: 5px;
+    animation: pulse 1.5s infinite; 
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2); 
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+.Water_Mark{
+    position: static;
+    opacity: 0.5;
+    margin: 10px;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+   
+    main {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .HP_Vak1, .HP_Vak2, .HP_Vak3 {
+        width: 90%;  
+        margin: 10px; 
+        padding: 10px;
+        box-shadow: none;
+        text-align: center;  
+    }
+  
+    .header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+   
+    
+    .ProjectFoto {
+        width: 90%;  
+        max-width: 350px; 
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ProjectFoto img {
+        width: 80vw;
+        height: auto;
+    }
+
+
+    .HP_Vak2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+    }
+
+    
+    .HP_Vak3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+        align-self: center;
+        width: 100%;
+    }
+
+    .ProjectFoto {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

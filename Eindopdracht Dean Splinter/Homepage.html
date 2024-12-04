@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Main.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <nav>
+            <a href="Homepage.html">Home button</a>
+            <a href="WieBenIk.html">Wie ben ik?</a>
+            <a href="Waarom.html">Waarom?</a>
+            <a href="https://github.com/FaylixOnTop" target="_blank">GitHub</a>
+        </nav>
+    </div>
+
+    <main>
+        <section class="HP_Vak1">
+            <p>Welkom! Ik ben Dean, een student Software Development. Ik studeer nu ongeveer voor 4 maanden en dit is wat ik tot nu toe kan met HTML CSS. Hoewel ik relatief nieuw ben met HTML en CSS, heb ik al wel ervaring opgedaan met Java. Ik heb gewerkt aan een project die u ook kunt zien links onder in!</p>
+        </section>
+
+        <section class="HP_Vak2">
+            <div>
+                <p id="toggleForm" class="clickable">Contact Form</p>
+        
+                <form id="contactForm" action="#" method="post">
+                    <label for="name">Naam:</label>
+                    <input type="text" id="name" name="name" placeholder="Voer naam in" required>
+                    <label for="Reden">Reden:</label>
+                    <input type="text" id="Reden" name="Reden" placeholder="Voer reden in" required>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="HP_Vak3">
+            <div class="ProjectFoto">
+                <img src="https://images.crazygames.com/games/chrome-dino/cover-1669113832091.png?auto=format%2Ccompress&q=45&cs=strip&ch=DPR&w=1200&h=630&fit=crop">
+                <p>Als mijn eerste project heb ik de dino game van google nagemaakt, hier had ik toen 6 weken voor en ik vondt dit wel moeilijk.</p>
+            </div>
+
+            <div class="ProjectFoto">
+                <img src="https://www.hubspot.com/hs-fs/hubfs/free-website-builder.png?width=595&height=400&name=free-website-builder.png">
+                <p>De website waar je nu op zit is mijn 2de project! Ik heb hier voor 4 weken gehadt om HTML/CSS te leren en moest toen deze website maken</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="footer">
+        <p class="Water_Mark">Dean Splinter website 2024</p>
+        <p class="Wich_Page">Home Page</p>
+    </div>
+  
+    <script>
+        const toggleForm = document.getElementById('toggleForm');
+        const contactForm = document.getElementById('contactForm');
+
+        toggleForm.addEventListener('click', function() {
+            
+            if (contactForm.style.display === 'none') {
+                contactForm.style.display = 'block'; 
+            } else {
+                contactForm.style.display = 'none'; 
+            }
+        })
+    </script>
+</body>
+</html>

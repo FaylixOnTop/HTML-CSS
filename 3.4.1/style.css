@@ -1,0 +1,24 @@
+.Test p {
+    font-size: 64px;
+}
+
+
+.Test p:nth-child(1) {
+    color: red; 
+}
+
+.Test p:nth-child(2) {
+    color: green;
+}
+
+.Test p:nth-child(3) {
+    color: blue;
+}
+
+.Test p:nth-child(4) {
+    color: orange;
+}
+
+.Test p:nth-child(5) {
+    color: purple;
+}

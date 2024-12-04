@@ -1,0 +1,16 @@
+.Rood {
+    color: red;
+}
+
+#Blauw {
+    color: rgb(0, 4, 255);
+}
+
+h1{
+    font-size:xx-large;
+}
+
+body{
+    background-image: url(https://static.wikia.nocookie.net/project-deepwoken/images/6/66/Blackfelinor.png/revision/latest?cb=20240122223606);
+    background-size: cover;
+}
