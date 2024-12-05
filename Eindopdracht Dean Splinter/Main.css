@@ -1,3 +1,4 @@
+/* Algemeen stijlen voor het hele document */
 html, body {
     margin: 0;
     padding: 0;
@@ -5,39 +6,41 @@ html, body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    height: 100%;
     min-height: 100vh;
 }
 
+/* Achtergrond en layout voor het body-element */
 body {
     background: linear-gradient(120deg, #444444, #757577);
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    flex-direction: column; 
 }
 
+/* Main sectie voor de inhoud */
 main {
     flex: 1;
-    display: grid;
+    display: grid; 
     grid-template-areas: 
         "vak1 vak2"
-        "vak4 vak3";
+        "vak4 vak3"; 
     grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto;
-    gap: 20px;
+    grid-template-rows: auto auto; 
+    gap: 10px;
     padding: 20px;
-    background-color: #444444;
+    background-color: #444444; 
 }
 
+/* Header met navigatie */
 .header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #333;
+    justify-content: space-between; 
+    align-items: center; 
+    background: #333; 
     color: white;
     padding: 20px;
 }
 
+/* Footer-stijlen */
 .footer {
     display: flex;
     justify-content: space-between;
@@ -48,6 +51,7 @@ main {
     gap: 80vw;
 }
 
+/* Navigatie menu */
 nav {
     display: flex;
     gap: 20px;
@@ -63,48 +67,58 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Algemene stijlen voor de vakken 1, 2, 3 */
+.HP_Vak1, .HP_Vak2, .HP_Vak3 {
+    background-color: #333; 
+    color: white;
+    border-radius: 5px; 
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2); 
+    margin: 15px;
+}
+
+/* Specifieke stijlen voor hp_vak1 */
 .HP_Vak1 {
     font-size: 25px; 
-    grid-area: vak1;
-    background-color: #333;
-    color: white;
+    grid-area: vak1; 
     text-align: center;
-    padding: 10px; 
-    border-radius: 5px;
-    width: 25vw;
-    height: auto;
-    margin: 15px;   
+    padding: 10px;
+    width: 25vw; 
     height: fit-content;
 }
 
+/* Specifieke stijlen voor hp_vak2 */
 .HP_Vak2 {
     grid-area: vak2;
-    background-color: #333;
-    color: white;
     padding: 20px;
-    border-radius: 5px;
     text-align: center;
-    justify-self: center;
-    
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    
+    justify-self: center; 
     width: fit-content;  
     height: fit-content; 
 }
 
+/* Specifieke stijlen voor hp_vak3 */
+.HP_Vak3 {
+    grid-area: vak3;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-self: end;
+}
+
+/* Stijlen voor het formulier */
 form {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 10px; 
 }
 
+/* Formulier begint verborgen */
 #contactForm {
     display: none;
     margin-top: 10px;
 }
 
+/* knop voor het formulier */
 #toggleForm {
     cursor: pointer;
     color: rgb(255, 255, 255); 
@@ -115,30 +129,14 @@ form {
     color: #b8b8b8;
 }
 
-.HP_Vak3 {
-    grid-area: vak3;
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    align-self: end;
-    width: 40vw;
-}
-
-.HP_Vak1, .HP_Vak2, .HP_Vak3 {
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 2); 
-}
-
+/* Afbeelding van projecten */
 .ProjectFoto {
     text-align: center;
-    width: 350px; 
-    height: auto; 
+    width: 90%;  
+    max-width: 350px;
+    margin: 0 auto 10px; 
+    height: auto;
 }
-
 
 img {
     max-width: 80%;
@@ -146,35 +144,32 @@ img {
     border-radius: 5px;
 }
 
+/* Animatie voor watermark*/
 .Wich_Page {
-    position: static;
     padding: 5px;
-    animation: pulse 1.5s infinite; 
-  }
-  
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
     }
     50% {
-      transform: scale(1.2); 
-    }
-    100% {
-      transform: scale(1);
+        transform: scale(1.05);
     }
 }
 
+/* Watermerk onderaan de pagina */
 .Water_Mark{
-    position: static;
     opacity: 0.5;
     margin: 10px;
     padding: 10px;
 }
 
+/* Responsifeness */
 @media only screen and (max-width: 768px) {
-   
     main {
-        display: block;
+        display: block; /* Verandert grid met de groote */
         padding: 10px;
         text-align: center;
     }
@@ -186,35 +181,24 @@ img {
         box-shadow: none;
         text-align: center;  
     }
-  
+
     .header {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    
     nav {
         flex-direction: column;
         gap: 10px;
         align-items: center;
     }
 
-    
     .footer {
         flex-direction: column;
         gap: 10px;
         text-align: center;
-    }
-
-   
-    
-    .ProjectFoto {
-        width: 90%;  
-        max-width: 350px; 
-        margin-bottom: 10px;
-        margin-left: auto;
-        margin-right: auto;
+        padding: 20px;
     }
 
     .ProjectFoto img {
@@ -222,28 +206,16 @@ img {
         height: auto;
     }
 
-
-    .HP_Vak2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: fit-content;
-    }
-
-    
-    .HP_Vak3 {
+    .HP_Vak2, .HP_Vak3 {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 15px;
-        background-color: #333;
-        color: white;
-        padding: 10px;
-        margin: 10px;
-        border-radius: 5px;
-        align-self: center;
+        align-items: center;
         width: 100%;
+    }
+
+    .HP_Vak3 {
+        gap: 15px;
     }
 
     .ProjectFoto {
@@ -253,4 +225,57 @@ img {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+/* Specifieke stijlen voor pagina waarom */
+body.Waarom main {
+    display: grid;
+    grid-template-areas: 
+        "vak2 vak1"
+        "vak4 vak3";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+
+body.Waarom .HP_Vak1 {
+    grid-area: vak1;
+    align-self: start; 
+    justify-self: end; 
+}
+
+body.Waarom .HP_Vak2 {
+    grid-area: vak2;
+    justify-self: start;
+    align-self: start;
+}
+
+body.Waarom .HP_Vak3 {
+    grid-area: vak4;
+    justify-self: center;
+    align-self: start;
+}
+
+/* Specifieke stijlen voor pagina Wie ben ik */
+body.Wiebenik main {
+    display: grid;
+    grid-template-areas: 
+        "vak3 vak2 vak1"
+        "vak6 vak5 vak4"; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+
+body.Wiebenik .HP_Vak1 {
+    grid-area: vak3;
+    justify-self: center;
+}
+
+body.Wiebenik .HP_Vak2 {
+    grid-area: vak1;
+    justify-self: start;
+}
+
+body.Wiebenik .HP_Vak3 {
+    grid-area: vak6;
+    justify-self: center;
 }

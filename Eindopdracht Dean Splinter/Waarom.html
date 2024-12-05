@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Main.css">
+    <title>Waarom - Dean Splinter</title>
 </head>
 
-<body>
+<body class="Waarom">
 
-    <div class="header">
+    <header class="header">
         <nav>
             <a href="Homepage.html">Home button</a>
             <a href="WieBenIk.html">Wie ben ik?</a>
             <a href="Waarom.html">Waarom?</a>
             <a href="https://github.com/FaylixOnTop" target="_blank">GitHub</a>
         </nav>
-    </div>
+    </header>
 
     <main>
         <section class="HP_Vak1">
-            <p>Ik koos voor Software Development omdat technologie en programmeren me altijd hebben gefascineerd. Het geeft me de kans om creatief te zijn en complexe problemen op te lossen. Wat me vooral aanspreekt, is de combinatie van analytisch denken en innovatie: het bouwen van iets unieks dat impact kan maken.Daarnaast waardeer ik de mogelijkheid om mezelf continu te ontwikkelen in een vakgebied dat altijd in beweging is. Samenwerken in een team en leren van anderen vind ik ook erg motiverend, omdat het leidt tot betere oplossingen en nieuwe inzichten. Software Development biedt precies die mix van uitdaging en groei.</p>
+            <p>Ik koos voor Software Development omdat technologie en programmeren me altijd hebben gefascineerd. Het geeft me de kans om creatief te zijn en complexe problemen op te lossen. Wat me vooral aanspreekt, is de combinatie van analytisch denken en innovatie: het bouwen van iets unieks dat impact kan maken. Daarnaast waardeer ik de mogelijkheid om mezelf continu te ontwikkelen in een vakgebied dat altijd in beweging is. Samenwerken in een team en leren van anderen vind ik ook erg motiverend, omdat het leidt tot betere oplossingen en nieuwe inzichten. Software Development biedt precies die mix van uitdaging en groei.</p>
         </section>
 
         <section class="HP_Vak2">
             <div>
                 <p id="toggleForm" class="clickable">Contact Form</p>
         
-                <form id="contactForm" action="#" method="post">
+                <form id="contactForm" action="#" method="post" aria-labelledby="contactForm">
                     <label for="name">Naam:</label>
                     <input type="text" id="name" name="name" placeholder="Voer naam in" required>
                     <label for="Reden">Reden:</label>
@@ -38,28 +39,27 @@
 
         <section class="HP_Vak3">
             <div class="ProjectFoto">
-                <img src="https://www.firda.nl/sites/default/files/styles/hero_desktop/public/2023-07/Volw_It_Digitalisering_David_Vroom_19_06_23-26.jpg.webp?itok=oji2mqKz">
+                <img src="https://www.firda.nl/sites/default/files/styles/hero_desktop/public/2023-07/Volw_It_Digitalisering_David_Vroom_19_06_23-26.jpg.webp?itok=oji2mqKz" alt="Image of digitalization in Software Development">
                 <p>Software Development is voor mij meer dan alleen programmeren; het is een manier om ideeën tot leven te brengen en impact te maken. Ik kijk ernaar uit om mijn vaardigheden verder te verbeteren en samen te werken aan innovatieve projecten.</p>
             </div>
 
             <div class="ProjectFoto">
-                <img src="https://www.netsolutions.com/insights/wp-content/uploads/2022/07/11-best-future-programming-languages.webp">
+                <img src="https://www.netsolutions.com/insights/wp-content/uploads/2022/07/11-best-future-programming-languages.webp" alt="Image of future programming languages">
                 <p>Wat mij het meeste aanspreekt aan Software Development is de combinatie van creativiteit en logica. Ik geniet ervan om iets vanaf nul op te bouwen en problemen op een praktische manier op te lossen.</p>
             </div>
         </section>
     </main>
 
-    <div class="footer">
+    <footer class="footer">
         <p class="Water_Mark">Dean Splinter website 2024</p>
         <p class="Wich_Page">Waarom?</p>
-    </div>
+    </footer>
   
     <script>
         const toggleForm = document.getElementById('toggleForm');
         const contactForm = document.getElementById('contactForm');
 
         toggleForm.addEventListener('click', function() {
-            
             if (contactForm.style.display === 'none') {
                 contactForm.style.display = 'block'; 
             } else {

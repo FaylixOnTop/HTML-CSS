@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Main.css">
+    <title>Wie ben ik? - Dean Splinter</title>
 </head>
 
-<body>
+<body class="Wiebenik">
 
-    <div class="header">
+    <header class="header">
         <nav>
             <a href="Homepage.html">Home button</a>
             <a href="WieBenIk.html">Wie ben ik?</a>
             <a href="Waarom.html">Waarom?</a>
             <a href="https://github.com/FaylixOnTop" target="_blank">GitHub</a>
         </nav>
-    </div>
+    </header>
 
     <main>
         <section class="HP_Vak1">
@@ -26,7 +27,7 @@
             <div>
                 <p id="toggleForm" class="clickable">Contact Form</p>
         
-                <form id="contactForm" action="#" method="post">
+                <form id="contactForm" action="#" method="post" aria-labelledby="contactForm">
                     <label for="name">Naam:</label>
                     <input type="text" id="name" name="name" placeholder="Voer naam in" required>
                     <label for="Reden">Reden:</label>
@@ -38,28 +39,27 @@
 
         <section class="HP_Vak3">
             <div class="ProjectFoto">
-                <img src="https://limburg.pvda.nl/wp-content/uploads/sites/149/2017/12/teknologie.jpg">
+                <img src="https://limburg.pvda.nl/wp-content/uploads/sites/149/2017/12/teknologie.jpg" alt="Technology exploration image">
                 <p>Buiten de programmeerwereld hou ik van het verkennen van nieuwe technologieën, het spelen van games en het verdiepen in creatieve software-oplossingen. Ik geloof in leren door te doen, en mijn vrije tijd besteed ik graag aan het ontwikkelen van kleine persoonlijke projecten.</p>
             </div>
 
             <div class="ProjectFoto">
-                <img src="https://s3-cdn.cmlabs.co/page/2023/10/04/web-developer-definition-skills-and-responsibilities-908401.png">
+                <img src="https://s3-cdn.cmlabs.co/page/2023/10/04/web-developer-definition-skills-and-responsibilities-908401.png" alt="Web development skills and responsibilities">
                 <p>Mijn doel is om een ​​expert te worden in softwareontwikkeling en in de game-industrie een impact te maken. Ik ben altijd op zoek naar nieuwe kansen om mijn vaardigheden te verbeteren en samen te werken met andere professionals in het werk.</p>
             </div>
         </section>
     </main>
 
-    <div class="footer">
+    <footer class="footer">
         <p class="Water_Mark">Dean Splinter website 2024</p>
         <p class="Wich_Page">Wie ben ik?</p>
-    </div>
+    </footer>
   
     <script>
         const toggleForm = document.getElementById('toggleForm');
         const contactForm = document.getElementById('contactForm');
 
         toggleForm.addEventListener('click', function() {
-            
             if (contactForm.style.display === 'none') {
                 contactForm.style.display = 'block'; 
             } else {
